@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { GraduationCap, User, House, Mail, Phone, Star, Code, Layers, Pen} from "lucide-react";
+import { GraduationCap, User, House, Mail, Phone, Star, Code, Layers, Pen, FolderKanban, HardHat } from "lucide-react";
 
 export default function Home() {
   return (
@@ -95,8 +95,14 @@ export default function Home() {
                 </div>
 
 
-                <div className="bg-white/60 col-span-2 row-span-1 m-3 mr-7 rounded-2xl h-max">
+                <div className="bg-white/60 col-span-2 row-span-1 m-3 mr-7 rounded-2xl h-auto">
                     <div className='grid grid-cols-2 grid-rows-2'>
+                        <div className='col-span-1 row-span-2 my-5 ml-5 py-5 pl-5 bg-white/60 rounded-l-xl'>
+                            <div className='flex gap-3'><FolderKanban className="w-5 h-5 text-black"/>Projects</div>
+                        </div>
+                        <div className='col-span-1 row-span-2 my-5 mr-5 py-5 pl-5 bg-white/60 rounded-r-xl'>
+                            <div className='flex gap-3'><HardHat className="w-5 h-5 text-black"/>Work Experience</div>
+                        </div>
                     </div>
                 </div>
             </div>
