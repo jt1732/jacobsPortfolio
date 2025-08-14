@@ -102,6 +102,52 @@ export default function Home() {
                         </div>
                         <div className='col-span-1 row-span-2 my-5 mr-5 py-5 pl-5 bg-white/60 rounded-r-xl'>
                             <div className='flex gap-3'><HardHat className="w-5 h-5 text-black"/>Work Experience</div>
+                            <div className='pt-5'>
+                                <div className='flex justify-between pr-5'>
+                                    <span>Professional Sales Assistant</span>
+                                    <span>Wairau Valley, Auckland</span>
+                                </div>
+                                <div className='flex justify-between pr-5'>
+                                    <span>Elite Fitness</span>
+                                    <span>2025 - Current</span>
+                                </div>
+                                <div className='pl-10 indent-[-1.4rem]'>
+                                    <li>Provided friendly and professional customer service by assisting with queries and ensuring a positive in-store experience</li>
+                                    <li>Resolved customer issues promptly and effectively, maintaining a high standard of professionalism</li>
+                                    <li>Assisted in assembling and delivering purchased products, ensuring high-quality and efficient service</li>
+                                </div>
+                            </div>
+                            <div className='pt-10'>
+                                <div className='flex justify-between pr-5'>
+                                    <span>General Hand</span>
+                                    <span>Katikati, Bay Of Plenty</span>
+                                </div>
+                                <div className='flex justify-between pr-5'>
+                                    <span>Claymark Limited</span>
+                                    <span>2022 - 2025</span>
+                                </div>
+                                <div className='pl-10 indent-[-1.4rem]'>
+                                    <li>Assisted in the manufacturing and production of Claymark clear pine</li>
+                                    <li>Operated production machines and hand tools</li>
+                                    <li>Performed grading processes to assess product quality and meet company standards</li>
+                                    <li>Engaged in physical labor and teamwork to enhance production efficiency</li>
+                                </div>
+                            </div>
+                            <div className='pt-10'>
+                                <div className='flex justify-between pr-5'>
+                                    <span>Shop Hand</span>
+                                    <span>Waihi Beach, Bay Of Plenty</span>
+                                </div>
+                                <div className='flex justify-between pr-5'>
+                                    <span>Wilson Road Fish Shop</span>
+                                    <span>2021 - 2023</span>
+                                </div>
+                                <div className='pl-10 indent-[-1.4rem]'>
+                                    <li>Processed customer orders efficiently while delivering excellent customer service</li>
+                                    <li>Prepared and cooked food to meet quality and safety standards</li>
+                                    <li>Packaged food and ensured cleanliness and organization in both the kitchen and store</li>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
