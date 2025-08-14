@@ -19,7 +19,7 @@ export default function Home() {
                             <div className='
                             col-span-1 relative min-h-fit
                             row-span-10 md:row-span-12 lg:row-span-8 xl:row-span-10
-                            m-15 sm:mx-25 md:mx-35 lg:mx-12
+                            mx-12 my-15 sm:mx-25 md:mx-35 lg:mx-8 lg:my-20 xl:my-10
                             '>
                                 <Image
                                     src="/headshot.jpg"
