@@ -12,14 +12,20 @@ export default function Home() {
                     <a className="p-2 bg-transparent hover:bg-white/40 rounded-xl">Contact</a>
                 </div>
             </div>
-             <div className={'w-screen grid grid-cols-3 grid-rows-2'}>
-                <div className="bg-white/60 col-span-1 row-span-2 m-3 rounded-2xl relative overflow-hidden">
-                    <div className="text-[8px] lg:text-[12px] xl:text-base h-screen w-full grid grid-cols-3 grid-rows-24">
-                            <div className='col-span-3 row-span-6 md:row-span-11 relative m-2 sm:m-4 md:m-8 lg:mx-12'>
+             <div className={'min-h-screen w-screen grid grid-cols-1 lg:grid-cols-3 grid-rows-[auto_auto_auto] lg:grid-rows-2'}>
+                <div className="bg-white/60 col-span-1 row-span-2 rounded-2xl relative overflow-hidden mr-7 lg:mr-0 m-3 ">
+
+                    <div className="text-base min-h-[1000px] w-full grid grid-cols-1 grid-rows-24">
+                            <div className='
+                            col-span-1 relative min-h-fit
+                            row-span-12 lg:row-span-10
+                            m-12 sm:mx-25 md:mx-35 lg:mx-10
+                            '>
                                 <Image
                                     src="/headshot.jpg"
                                     alt="Headshot"
                                     quality={100}
+
                                     fill
                                     className='rounded-2xl border-3 border-white/60 shadow-xl/20'
                                 />
@@ -77,8 +83,8 @@ export default function Home() {
 
                     </div>
                 </div>
-                <div className="bg-white/60 col-span-2 row-span-1 m-3 mr-7 rounded-2xl"></div>
-                <div className="bg-white/60 col-span-2 row-span-1 m-3 mr-7 rounded-2xl"></div>
+                <div className="bg-white/60 col-span-2 row-span-1 m-3 mr-7 rounded-2xl">Hello</div>
+                <div className="bg-white/60 col-span-2 row-span-1 m-3 mr-7 rounded-2xl">Hello</div>
             </div>
         </div>
   );
