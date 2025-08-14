@@ -18,8 +18,8 @@ export default function Home() {
                     <div className="text-base min-h-[1000px] w-full grid grid-cols-1 grid-rows-24">
                             <div className='
                             col-span-1 relative min-h-fit
-                            row-span-12 lg:row-span-10
-                            m-12 sm:mx-25 md:mx-35 lg:mx-10
+                            row-span-10 md:row-span-12 lg:row-span-8 xl:row-span-10
+                            m-15 sm:mx-25 md:mx-35 lg:mx-12
                             '>
                                 <Image
                                     src="/headshot.jpg"
@@ -42,40 +42,40 @@ export default function Home() {
                                 <Phone className="w-3 h-3 lg:w-5 lg:h-5 text-black" />+64 020 4075 9564</div>
 
                             <div className='col-span-3 '></div>
-                            <div className='col-span-3 mb-5 row-span-8 bg-white/60 rounded-2xl mx-2 sm:mx-4 md:mx-8 lg:mx-12 text-[8px] lg:text-[12px] xl:text-base shadow-xl/20'>
+                            <div className='col-span-3 mb-5 row-span-8 bg-white/60 rounded-2xl mx-2 sm:mx-4 md:mx-8 lg:mx-12 text-lg shadow-xl/20'>
                                 <div className='h-full grid grid-cols-1 grid-rows-10'>
-                                    <div className='pl-3 md:pl-5 row-span-2 flex items-center gap-3'>
-                                        <Star className="w-2 h-2 lg:w-5 lg:h-5 text-black"/>Skills</div>
-                                    <div className='pl-3 md:pl-5 row-span-4 flex-col items-center gap-3'>
+                                    <div className='px-5 row-span-2 flex items-center gap-3'>
+                                        <Star className="w-5 h-5 text-black"/>Skills</div>
+                                    <div className='px-5 row-span-4 flex-col items-center gap-3'>
                                          <div className='flex items-center gap-3'>
-                                            <Code className="w-2 h-2 lg:w-5 lg:h-5 text-black" />
+                                            <Code className="w-5 h-5 text-black" />
                                             <span>Technical Skills</span>
                                          </div>
-                                            <div className="w-full flex flex-wrap items-center pt-1 gap-1 overflow-hidden text-[7px] md:text-[8px] xl:text-sm">
-                                                <span className="px-0.75 py-0.5 bg-white/70 rounded-lg shadow-sm">Python</span>
-                                                <span className="px-0.75 py-0.5 bg-white/70 rounded-lg shadow-sm">Python</span>
-                                                <span className="px-0.75 py-0.5 bg-white/70 rounded-lg shadow-sm">Python</span>
-                                                <span className="px-0.75 py-0.5 bg-white/70 rounded-lg shadow-sm">Python</span>
-                                                <span className="px-0.75 py-0.5 bg-white/70 rounded-lg shadow-sm">Python</span>
-                                                <span className="px-0.75 py-0.5 bg-white/70 rounded-lg shadow-sm">Python</span>
-                                                <span className="px-0.75 py-0.5 bg-white/70 rounded-lg shadow-sm">Python</span>
-                                                <span className="px-0.75 py-0.5 bg-white/70 rounded-lg shadow-sm">Python</span>
+                                            <div className="w-full flex flex-wrap items-center pt-1 gap-2 overflow-hidden">
+                                                <span className="px-1.5 py-1 bg-white/70 rounded-lg shadow-sm">Python</span>
+                                                <span className="px-1.5 py-1 bg-white/70 rounded-lg shadow-sm">Python</span>
+                                                <span className="px-1.5 py-1 bg-white/70 rounded-lg shadow-sm">Python</span>
+                                                <span className="px-1.5 py-1 bg-white/70 rounded-lg shadow-sm">Python</span>
+                                                <span className="px-1.5 py-1 bg-white/70 rounded-lg shadow-sm">Python</span>
+                                                <span className="px-1.5 py-1 bg-white/70 rounded-lg shadow-sm">Python</span>
+                                                <span className="px-1.5 py-1 bg-white/70 rounded-lg shadow-sm">Python</span>
+                                                <span className="px-1.5 py-1 bg-white/70 rounded-lg shadow-sm">Python</span>
                                             </div>
                                         </div>
-                                    <div className='pl-3 md:pl-5 row-span-4 flex-col items-center gap-3'>
+                                    <div className='px-5 pb-5 row-span-4 flex-col items-center gap-2'>
                                          <div className='flex items-center gap-3'>
-                                            <Layers className="w-2 h-2 lg:w-5 lg:h-5 text-black" />
+                                            <Layers className="w-5 h-5 text-black" />
                                             <span>Fundamental Skills</span>
                                           </div>
-                                            <div className="w-full flex flex-wrap items-center pt-1 gap-1 overflow-hidden text-[7px] md:text-[8px] xl:text-sm">
-                                                <span className="px-0.75 py-0.5 bg-white/70 rounded-lg shadow-sm">Python</span>
-                                                <span className="px-0.75 py-0.5 bg-white/70 rounded-lg shadow-sm">Python</span>
-                                                <span className="px-0.75 py-0.5 bg-white/70 rounded-lg shadow-sm">Python</span>
-                                                <span className="px-0.75 py-0.5 bg-white/70 rounded-lg shadow-sm">Python</span>
-                                                <span className="px-0.75 py-0.5 bg-white/70 rounded-lg shadow-sm">Python</span>
-                                                <span className="px-0.75 py-0.5 bg-white/70 rounded-lg shadow-sm">Python</span>
-                                                <span className="px-0.75 py-0.5 bg-white/70 rounded-lg shadow-sm">Python</span>
-                                                <span className="px-0.75 py-0.5 bg-white/70 rounded-lg shadow-sm">Python</span>
+                                            <div className="w-full flex flex-wrap items-center pt-1 gap-2 overflow-hidden">
+                                                <span className="px-1.5 py-1 bg-white/70 rounded-lg shadow-sm">Python</span>
+                                                <span className="px-1.5 py-1 bg-white/70 rounded-lg shadow-sm">Python</span>
+                                                <span className="px-1.5 py-1 bg-white/70 rounded-lg shadow-sm">Python</span>
+                                                <span className="px-1.5 py-1 bg-white/70 rounded-lg shadow-sm">Python</span>
+                                                <span className="px-1.5 py-1 bg-white/70 rounded-lg shadow-sm">Python</span>
+                                                <span className="px-1.5 py-1 bg-white/70 rounded-lg shadow-sm">Python</span>
+                                                <span className="px-1.5 py-1 bg-white/70 rounded-lg shadow-sm">Python</span>
+                                                <span className="px-1.5 py-1 bg-white/70 rounded-lg shadow-sm">Python</span>
                                             </div>
                                     </div>
                                 </div>
