@@ -5,7 +5,7 @@ export default function Home() {
   return (
         <div className={'bg-gradient-to-r from-blue-200/80 to-rose-200/80 overflow-hidden text-black'}>
             <div className="w-screen h-15 bg-white/60 flex items-center justify-between px-5">
-                <h1>Jacob's Portfolio</h1>
+                <h1>Jacob&#39;s Portfolio</h1>
                 <div className='flex space-x-6 pr-5'>
                     <a className="p-2 bg-transparent hover:bg-white/40 rounded-xl">Home</a>
                     <a className="p-2 bg-transparent hover:bg-white/40 rounded-xl">Projects</a>
