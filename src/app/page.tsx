@@ -21,7 +21,7 @@ export default function Home() {
                                     width={560}
                                     height={560}
                                     quality={100}
-                                    className='rounded-2xl'
+                                    className='rounded-2xl border-2 border-black/80 shadow-2xl/90'
                                 />
                             </div>
                     </div>
