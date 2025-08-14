@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { GraduationCap, User, House, Mail, Phone, Star, Code, Layers, Pen, FolderKanban, HardHat, UserRoundSearch  } from "lucide-react";
+import { GraduationCap, User, House, Mail, Phone, Star, Code, Layers, Pen, FolderKanban, HardHat, UserRoundSearch, Github, Linkedin   } from "lucide-react";
 import Link from "next/link";
 
 export default function Home() {
@@ -100,6 +100,19 @@ export default function Home() {
                     <div className='grid grid-cols-1 lg:grid-cols-2 grid-rows-1'>
                         <div className='col-span-1 row-span-1 my-5 ml-5 mr-5 lg:mr-0 py-5 pl-5 bg-white/60 rounded-xl shadow-[0_30px_20px_-20px_rgba(0,0,0,0.3)] lg:rounded-none lg:rounded-l-xl'>
                             <div className='flex gap-3'><FolderKanban className="w-5 h-5 text-black"/>Projects</div>
+                            <div className='pt-5'>
+                                <div className='flex justify-between pr-5'>
+                                    <span>Heart Risk Predictor</span>
+                                </div>
+                                <div className='flex justify-between pr-5'>
+                                    <span>Python</span>
+                                    <span>2025</span>
+                                </div>
+                                <div className='pl-10 pr-5 indent-[-1.4rem]'>
+                                    <li>Designed and implemented a machine learning application to assess potential heart disease risk based on user-submitted survey data. Users receive a personalized, easy-to-understand analysis generated using GPT</li>
+                                    <li>Technologies Used: Python, Scikit-Learn, Pandas, Matplotlib, Imblearn, Tkinter, OpenAI GPT API</li>
+                                </div>
+                            </div>
                         </div>
                         <div className='col-span-1 row-span-1 my-5 mr-5 ml-5 lg:ml-0 py-5 pl-5 bg-white/60 rounded-xl shadow-[0_30px_20px_-20px_rgba(0,0,0,0.3)] lg:rounded-none lg:rounded-r-xl'>
                             <div className='flex gap-3'><HardHat className="w-5 h-5 text-black"/>Work Experience</div>
@@ -155,6 +168,10 @@ export default function Home() {
                  <div className="bg-white/60 col-span-2 row-span-1 m-3 mr-7 rounded-2xl h-min">
                         <div className='my-5 mx-5 pl-5 py-5 bg-white/60 rounded-xl shadow-xl/20'>
                             <div className='flex gap-3'><UserRoundSearch className="w-5 h-5 text-black"/>Links</div>
+                            <div className='flex gap-20'>
+                                <a className='flex gap-3 pt-5 text-blue-500' href='https://www.linkedin.com/in/jacob-turnbull-b77a07352/' ><Linkedin className="w-5 h-5 text-black"/>Jacob T</a>
+                                <a className='flex gap-3 pt-5 text-blue-500' href='https://github.com/jt1732' ><Github className="w-5 h-5 text-black"/>Jt1732</a>
+                            </div>
                         </div>
                 </div>
             </div>
