@@ -16,33 +16,31 @@ export default function Home() {
              <div className={' w-screen grid grid-cols-1 lg:grid-cols-3 grid-rows-[auto_auto_auto] lg:grid-rows-[auto_auto_auto_auto_auto]'}>
                 <div className="bg-white/60 col-span-1 row-span-2 lg:row-span-6 rounded-2xl relative overflow-hidden mr-7 lg:mr-0 m-3 ">
 
-                    <div className="text-base w-full grid grid-cols-1 grid-rows-24">
+                    <div className="text-base w-full grid grid-cols-1 grid-rows-[auto]">
                             <div className='
-                            col-span-1 relative min-h-fit
-                            row-span-7 md:row-span-12 lg:row-span-8 xl:row-span-10
+                            col-span-1 relative h-[560px] grid-row-span-15
                             mx-10 my-10 sm:mx-25 md:mx-30 lg:mx-8 xl:mx-12 lg:my-20 xl:my-10
                             '>
                                 <Image
                                     src="/headshot.jpg"
                                     alt="Headshot"
                                     quality={100}
-
                                     fill
                                     className='rounded-2xl border-3 border-white/60 shadow-xl/20'
                                 />
                             </div>
-                            <div className='mx-5 pl-3 md:pl-5 col-span-3 bg-white/60 rounded-t-2xl flex items-center gap-3'>
+                            <div className='p-5 mt-5 mx-5 pl-3 md:pl-5 col-span-3 bg-white/60 rounded-t-2xl flex items-center gap-3'>
                                  <User className="w-3 h-3 lg:w-5 lg:h-5 text-black" />Jacob Turnbull</div>
-                            <div className='mx-5 pl-3 md:pl-5 col-span-3 bg-white/60 flex items-center gap-3'>
+                            <div className='p-5 mx-5 pl-3 md:pl-5 col-span-3 bg-white/60 flex items-center gap-3'>
                                 <GraduationCap className="w-3 h-3 lg:w-5 lg:h-5 text-black" />BSc (CompSci) | BCom (Finance)</div>
-                            <div className='mx-5 pl-3 md:pl-5 col-span-3 bg-white/60 flex items-center gap-3'>
+                            <div className='p-5 mx-5 pl-3 md:pl-5 col-span-3 bg-white/60 flex items-center gap-3'>
                                 <House className="w-3 h-3 lg:w-5 lg:h-5 text-black" />Auckland, New Zealand</div>
-                            <div className='mx-5 pl-3 md:pl-5 col-span-3 bg-white/60 flex items-center gap-3'>
+                            <div className='p-5 mx-5 pl-3 md:pl-5 col-span-3 bg-white/60 flex items-center gap-3'>
                                 <Mail className="w-3 h-3 lg:w-5 lg:h-5 text-black" />Jacob.t.turnbull@gmail.com</div>
-                            <div className='mx-5 pl-3 md:pl-5 col-span-3 bg-white/60 rounded-b-2xl flex items-center shadow-xl/20 gap-3'>
+                            <div className='p-5 mx-5 pl-3 md:pl-5 col-span-3 bg-white/60 rounded-b-2xl flex items-center shadow-xl/20 gap-3'>
                                 <Phone className="w-3 h-3 lg:w-5 lg:h-5 text-black" />+64 020 4075 9564</div>
 
-                            <div className='col-span-3 '></div>
+                            <div className='col-span-3 my-8 '></div>
                             <div className='col-span-3 mb-5 row-span-8 bg-white/60 rounded-2xl mx-5 text-lg shadow-xl/20'>
                                 <div className='h-full grid grid-cols-1 grid-rows-10'>
                                     <div className='px-5 row-span-2 flex items-center gap-3'>
