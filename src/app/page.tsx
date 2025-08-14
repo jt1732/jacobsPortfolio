@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { GraduationCap, User, House, Mail, Phone, Star, Code, Layers} from "lucide-react";
+import { GraduationCap, User, House, Mail, Phone, Star, Code, Layers, Pen} from "lucide-react";
 
 export default function Home() {
   return (
@@ -12,14 +12,14 @@ export default function Home() {
                     <a className="p-2 bg-transparent hover:bg-white/40 rounded-xl">Contact</a>
                 </div>
             </div>
-             <div className={'min-h-screen w-screen grid grid-cols-1 lg:grid-cols-3 grid-rows-[auto_auto_auto] lg:grid-rows-2'}>
-                <div className="bg-white/60 col-span-1 row-span-2 rounded-2xl relative overflow-hidden mr-7 lg:mr-0 m-3 ">
+             <div className={'min-h-screen w-screen grid grid-cols-1 lg:grid-cols-3 grid-rows-[auto_auto_auto] lg:grid-rows-[auto_auto_auto_auto_auto]'}>
+                <div className="bg-white/60 col-span-1 row-span-2 lg:row-span-6 rounded-2xl relative overflow-hidden mr-7 lg:mr-0 m-3 ">
 
-                    <div className="text-base min-h-[1000px] w-full grid grid-cols-1 grid-rows-24">
+                    <div className="text-base w-full grid grid-cols-1 grid-rows-24">
                             <div className='
                             col-span-1 relative min-h-fit
-                            row-span-10 md:row-span-12 lg:row-span-8 xl:row-span-10
-                            mx-12 my-15 sm:mx-25 md:mx-35 lg:mx-8 lg:my-20 xl:my-10
+                            row-span-7 md:row-span-12 lg:row-span-8 xl:row-span-10
+                            mx-12 my-8 sm:mx-25 md:mx-30 lg:mx-8 xl:mx-12 lg:my-20 xl:my-10
                             '>
                                 <Image
                                     src="/headshot.jpg"
@@ -30,19 +30,19 @@ export default function Home() {
                                     className='rounded-2xl border-3 border-white/60 shadow-xl/20'
                                 />
                             </div>
-                            <div className='mx-2 sm:mx-4 md:mx-8 lg:mx-12 pl-3 md:pl-5 col-span-3 bg-white/60 rounded-t-2xl flex items-center gap-3'>
+                            <div className='mx-4 md:mx-8 lg:mx-12 pl-3 md:pl-5 col-span-3 bg-white/60 rounded-t-2xl flex items-center gap-3'>
                                  <User className="w-3 h-3 lg:w-5 lg:h-5 text-black" />Jacob Turnbull</div>
-                            <div className='mx-2 sm:mx-4 md:mx-8 lg:mx-12 pl-3 md:pl-5 col-span-3 bg-white/60 flex items-center gap-3'>
+                            <div className='mx-4 md:mx-8 lg:mx-12 pl-3 md:pl-5 col-span-3 bg-white/60 flex items-center gap-3'>
                                 <GraduationCap className="w-3 h-3 lg:w-5 lg:h-5 text-black" />BSc (CompSci) | BCom (Finance)</div>
-                            <div className=' mx-2 sm:mx-4 md:mx-8 lg:mx-12 pl-3 md:pl-5 col-span-3 bg-white/60 flex items-center gap-3'>
+                            <div className='mx-4 md:mx-8 lg:mx-12 pl-3 md:pl-5 col-span-3 bg-white/60 flex items-center gap-3'>
                                 <House className="w-3 h-3 lg:w-5 lg:h-5 text-black" />Auckland, New Zealand</div>
-                            <div className='mx-2 sm:mx-4 md:mx-8 lg:mx-12 pl-3 md:pl-5 col-span-3 bg-white/60 flex items-center gap-3'>
+                            <div className='mx-4 md:mx-8 lg:mx-12 pl-3 md:pl-5 col-span-3 bg-white/60 flex items-center gap-3'>
                                 <Mail className="w-3 h-3 lg:w-5 lg:h-5 text-black" />Jacob.t.turnbull@gmail.com</div>
-                            <div className='mx-2 sm:mx-4 md:mx-8 lg:mx-12 pl-3 md:pl-5 col-span-3 bg-white/60 rounded-b-2xl flex items-center shadow-xl/20 gap-3'>
+                            <div className='mx-4 md:mx-8 lg:mx-12 pl-3 md:pl-5 col-span-3 bg-white/60 rounded-b-2xl flex items-center shadow-xl/20 gap-3'>
                                 <Phone className="w-3 h-3 lg:w-5 lg:h-5 text-black" />+64 020 4075 9564</div>
 
                             <div className='col-span-3 '></div>
-                            <div className='col-span-3 mb-5 row-span-8 bg-white/60 rounded-2xl mx-2 sm:mx-4 md:mx-8 lg:mx-12 text-lg shadow-xl/20'>
+                            <div className='col-span-3 mb-5 row-span-8 bg-white/60 rounded-2xl mx-4 md:mx-8 lg:mx-12 text-lg shadow-xl/20'>
                                 <div className='h-full grid grid-cols-1 grid-rows-10'>
                                     <div className='px-5 row-span-2 flex items-center gap-3'>
                                         <Star className="w-5 h-5 text-black"/>Skills</div>
@@ -53,13 +53,13 @@ export default function Home() {
                                          </div>
                                             <div className="w-full flex flex-wrap items-center pt-1 gap-2 overflow-hidden">
                                                 <span className="px-1.5 py-1 bg-white/70 rounded-lg shadow-sm">Python</span>
-                                                <span className="px-1.5 py-1 bg-white/70 rounded-lg shadow-sm">Python</span>
-                                                <span className="px-1.5 py-1 bg-white/70 rounded-lg shadow-sm">Python</span>
-                                                <span className="px-1.5 py-1 bg-white/70 rounded-lg shadow-sm">Python</span>
-                                                <span className="px-1.5 py-1 bg-white/70 rounded-lg shadow-sm">Python</span>
-                                                <span className="px-1.5 py-1 bg-white/70 rounded-lg shadow-sm">Python</span>
-                                                <span className="px-1.5 py-1 bg-white/70 rounded-lg shadow-sm">Python</span>
-                                                <span className="px-1.5 py-1 bg-white/70 rounded-lg shadow-sm">Python</span>
+                                                <span className="px-1.5 py-1 bg-white/70 rounded-lg shadow-sm">Scikit-Learn</span>
+                                                <span className="px-1.5 py-1 bg-white/70 rounded-lg shadow-sm">Tkinter</span>
+                                                <span className="px-1.5 py-1 bg-white/70 rounded-lg shadow-sm">Next.js</span>
+                                                <span className="px-1.5 py-1 bg-white/70 rounded-lg shadow-sm">TypeScript</span>
+                                                <span className="px-1.5 py-1 bg-white/70 rounded-lg shadow-sm">TailwindCss</span>
+                                                <span className="px-1.5 py-1 bg-white/70 rounded-lg shadow-sm">Java</span>
+                                                <span className="px-1.5 py-1 bg-white/70 rounded-lg shadow-sm">Html</span>
                                             </div>
                                         </div>
                                     <div className='px-5 pb-5 row-span-4 flex-col items-center gap-2'>
@@ -68,14 +68,13 @@ export default function Home() {
                                             <span>Fundamental Skills</span>
                                           </div>
                                             <div className="w-full flex flex-wrap items-center pt-1 gap-2 overflow-hidden">
-                                                <span className="px-1.5 py-1 bg-white/70 rounded-lg shadow-sm">Python</span>
-                                                <span className="px-1.5 py-1 bg-white/70 rounded-lg shadow-sm">Python</span>
-                                                <span className="px-1.5 py-1 bg-white/70 rounded-lg shadow-sm">Python</span>
-                                                <span className="px-1.5 py-1 bg-white/70 rounded-lg shadow-sm">Python</span>
-                                                <span className="px-1.5 py-1 bg-white/70 rounded-lg shadow-sm">Python</span>
-                                                <span className="px-1.5 py-1 bg-white/70 rounded-lg shadow-sm">Python</span>
-                                                <span className="px-1.5 py-1 bg-white/70 rounded-lg shadow-sm">Python</span>
-                                                <span className="px-1.5 py-1 bg-white/70 rounded-lg shadow-sm">Python</span>
+                                                <span className="px-1.5 py-1 bg-white/70 rounded-lg shadow-sm">Motivation</span>
+                                                <span className="px-1.5 py-1 bg-white/70 rounded-lg shadow-sm">Adaptability</span>
+                                                <span className="px-1.5 py-1 bg-white/70 rounded-lg shadow-sm">Enthusiasm</span>
+                                                <span className="px-1.5 py-1 bg-white/70 rounded-lg shadow-sm">Problem-solving</span>
+                                                <span className="px-1.5 py-1 bg-white/70 rounded-lg shadow-sm">Self-learning</span>
+                                                <span className="px-1.5 py-1 bg-white/70 rounded-lg shadow-sm">Communication</span>
+                                                <span className="px-1.5 py-1 bg-white/70 rounded-lg shadow-sm">Curiosity</span>
                                             </div>
                                     </div>
                                 </div>
@@ -83,8 +82,23 @@ export default function Home() {
 
                     </div>
                 </div>
-                <div className="bg-white/60 col-span-2 row-span-1 m-3 mr-7 rounded-2xl">Hello</div>
-                <div className="bg-white/60 col-span-2 row-span-1 m-3 mr-7 rounded-2xl">Hello</div>
+                <div className="bg-white/60 col-span-2 row-span-1 m-3 mr-7 rounded-2xl p-10 h-min">
+                    <div className="bg-white/60 rounded-2xl w-full">
+                        <div className='flex gap-3 p-5' ><Pen className="w-5 h-5 text-black"/>About Me</div>
+                        <div className='flex gap-3 p-5'>
+                            I’m Jacob Turnbull, an aspiring software engineer and AI/ML enthusiast passionate about tackling challenges through creative, hands-on projects. Currently studying a conjoint Bachelor of Science in Computer Science and Bachelor of Commerce in Finance at the University of Auckland, I thrive in independent and collaborative environments, always seeking opportunities to expand my skills and capabilities.
+                            My technical experience spans Python, JavaScript, TypeScript, and Java, with strong proficiency in frameworks such as Next.js, React, Bootstrap, and machine learning libraries including Scikit-Learn, Pandas, and Matplotlib. I’ve built projects ranging from a high-accuracy heart disease risk prediction tool with a Tkinter-based graphical interface to a responsive full-stack web platform for managing school and community clubs. These projects showcase my ability to move seamlessly between front-end and back-end development while delivering practical, user-focused solutions.
+                            I’m highly motivated, adaptable, and resilient—whether it’s independently learning advanced concepts, meeting demanding production targets in manufacturing, or delivering professional service in retail environments. My problem-solving approach is driven by curiosity, persistence, and a desire to understand the “why” behind every challenge, ensuring that solutions are functional, meaningful, and efficient.
+                            Beyond technology, I value fitness, discipline, and personal growth. I’m training to represent New Zealand in powerlifting in 2026. I draw on lessons from rugby, hiking, and teamwork to bring energy, focus, and collaboration to every project I take on.
+                        </div>
+                    </div>
+                </div>
+
+
+                <div className="bg-white/60 col-span-2 row-span-1 m-3 mr-7 rounded-2xl h-max">
+                    <div className='grid grid-cols-2 grid-rows-2'>
+                    </div>
+                </div>
             </div>
         </div>
   );
