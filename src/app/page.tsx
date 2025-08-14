@@ -17,18 +17,19 @@ export default function Home() {
                 <div className="bg-white/60 col-span-1 row-span-2 lg:row-span-6 rounded-2xl relative overflow-hidden mr-7 lg:mr-0 m-3 ">
 
                     <div className="text-base w-full grid grid-cols-1 grid-rows-[auto]">
+                        <div className='flex items-center justify-center'>
                             <div className='
-                            col-span-1 relative h-[560px] grid-row-span-15
-                            mx-10 my-10 sm:mx-25 md:mx-30 lg:mx-8 xl:mx-12 lg:my-20 xl:my-10
+                            col-span-1 relative h-[55vh] w-[50vw] lg:h-[33vh] lg:w-[22vw] my-10
                             '>
                                 <Image
                                     src="/headshot.jpg"
                                     alt="Headshot"
                                     quality={100}
                                     fill
-                                    className='rounded-2xl border-3 border-white/60 shadow-xl/20'
+                                    className='rounded-2xl border-3 border-white/60 shadow-xl/20 '
                                 />
                             </div>
+                        </div>
                             <div className='p-5 mt-5 mx-5 pl-3 md:pl-5 col-span-3 bg-white/60 rounded-t-2xl flex items-center gap-3'>
                                  <User className="w-3 h-3 lg:w-5 lg:h-5 text-black" />Jacob Turnbull</div>
                             <div className='p-5 mx-5 pl-3 md:pl-5 col-span-3 bg-white/60 flex items-center gap-3'>
