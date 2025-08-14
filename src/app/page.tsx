@@ -13,17 +13,21 @@ export default function Home() {
             </div>
              <div className={'h-screen w-screen grid grid-cols-3 grid-rows-2'}>
                 <div className="bg-white/60 col-span-1 row-span-2 m-3 rounded-2xl relative overflow-hidden">
-                    <div className="h-screen w-full grid grid-cols-3 grid-rows-3">
-                            <div className='col-span-3 row-span-1 relative mt-4 mx-10'>
+                    <div className="h-screen w-full grid grid-cols-3 grid-rows-24">
+                            <div className='col-span-3 row-span-12 relative my-8 mx-12'>
                                 <Image
                                     src="/headshot.jpg"
                                     alt="Headshot"
-                                    width={560}
-                                    height={560}
                                     quality={100}
-                                    className='rounded-2xl border-2 border-black/80 shadow-2xl/90'
+                                    fill
+                                    className='rounded-2xl border-2 border-black/80 shadow-2xl/70'
                                 />
                             </div>
+                            <div className='mx-12 pl-5 col-span-3 bg-white/60 rounded-t-2xl flex items-center'>Jacob Turnbull</div>
+                            <div className='mx-12 pl-5 col-span-3 bg-white/60 flex items-center'>Jacob Turnbull</div>
+                            <div className='mx-12 pl-5 col-span-3 bg-white/60 flex items-center'>Jacob Turnbull</div>
+                            <div className='mx-12 pl-5 col-span-3 bg-white/60 flex items-center'>Jacob Turnbull</div>
+                            <div className='mx-12 pl-5 col-span-3 bg-white/60 rounded-b-2xl flex items-center'>Jacob Turnbull</div>
                     </div>
                 </div>
                 <div className="bg-white/60 col-span-2 row-span-1 m-3 rounded-2xl"></div>
