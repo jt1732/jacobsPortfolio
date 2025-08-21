@@ -12,7 +12,7 @@ export default function Home() {
                 </div>
             </div>
              <div className={' w-screen grid grid-cols-1 lg:grid-cols-3 grid-rows-[auto_auto_auto] lg:grid-rows-[auto_auto_auto_auto_auto]'}>
-                <div className="bg-white/60 col-span-1 row-span-2 lg:row-span-6 rounded-2xl relative overflow-hidden mr-7 lg:mr-0 m-3 ">
+                <div className="bg-white/60 col-span-1 row-span-2 lg:row-span-6 rounded-2xl relative overflow-hidden 5 lg:mr-0 m-3 ">
 
                     <div className="text-base w-full grid grid-cols-1 grid-rows-[auto]">
                         <div className='flex items-center justify-center'>
@@ -80,7 +80,7 @@ export default function Home() {
 
                     </div>
                 </div>
-                <div className="bg-white/60 col-span-2 row-span-1 m-3 mr-7 rounded-2xl p-5 h-min">
+                <div className="bg-white/60 col-span-2 row-span-1 m-3 5 rounded-2xl p-5 h-min">
                     <div className="bg-white/60 rounded-2xl w-full shadow-xl/20">
                         <div className='flex gap-3 p-5' ><Pen className="w-5 h-5 text-black"/>About Me</div>
                         <div className='flex gap-3 p-5'>
@@ -93,7 +93,7 @@ export default function Home() {
                 </div>
 
 
-                <div className="bg-white/60 col-span-2 row-span-1 m-3 mr-7 rounded-2xl h-min">
+                <div className="bg-white/60 col-span-2 row-span-1 m-3 mr-5 rounded-2xl h-min">
                     <div className='grid grid-cols-1 lg:grid-cols-2 grid-rows-1'>
                         <div className='col-span-1 row-span-1 my-5 ml-5 mr-5 lg:mr-0 py-5 pl-5 bg-white/60 rounded-xl shadow-[0_30px_20px_-20px_rgba(0,0,0,0.3)] lg:rounded-none lg:rounded-l-xl'>
                             <div className='flex gap-3'><FolderKanban className="w-5 h-5 text-black"/>Projects</div>
@@ -190,7 +190,7 @@ export default function Home() {
                         </div>
                     </div>
                 </div>
-                 <div className="bg-white/60 col-span-2 row-span-1 m-3 mr-7 rounded-2xl h-min">
+                 <div className="bg-white/60 col-span-2 row-span-1 m-3 mr-5 rounded-2xl h-min">
                         <div className='my-5 mx-5 pl-5 py-5 bg-white/60 rounded-xl shadow-xl/20'>
                             <div className='flex gap-3'><UserRoundSearch className="w-5 h-5 text-black"/>Links</div>
                             <div className='flex gap-20'>
