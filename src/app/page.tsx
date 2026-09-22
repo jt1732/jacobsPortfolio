@@ -1,8 +1,31 @@
 import Image from "next/image";
 import { GraduationCap, User, House, Mail, Phone, Star, Code, Layers, Pen, FolderKanban, HardHat, UserRoundSearch, Github, Linkedin   } from "lucide-react";
 import { Link } from "../components/ui/Link";
+import { Tag } from "@/components/ui/Tag";
 
 export default function Home() {
+
+    const technicalSkills = [
+        "Python",
+        "Scikit-Learn",
+        "Tkinter",
+        "Next.js",
+        "TypeScript",
+        "TailwindCss",
+        "Java",
+        "Html",
+    ];
+
+    const fundamentalSkills = [
+        "Motivation",
+        "Adaptability",
+        "Enthusiasm",
+        "Problem-solving",
+        "Self-learning",
+        "Communication",
+        "Curiosity",
+    ];
+
   return (
     <div>
         
@@ -46,14 +69,11 @@ export default function Home() {
                                         <span>Technical Skills</span>
                                         </div>
                                         <div className="w-full flex flex-wrap items-center pt-1 gap-2 overflow-hidden">
-                                            <span className="px-1.5 py-1 bg-white/70 rounded-lg shadow-sm">Python</span>
-                                            <span className="px-1.5 py-1 bg-white/70 rounded-lg shadow-sm">Scikit-Learn</span>
-                                            <span className="px-1.5 py-1 bg-white/70 rounded-lg shadow-sm">Tkinter</span>
-                                            <span className="px-1.5 py-1 bg-white/70 rounded-lg shadow-sm">Next.js</span>
-                                            <span className="px-1.5 py-1 bg-white/70 rounded-lg shadow-sm">TypeScript</span>
-                                            <span className="px-1.5 py-1 bg-white/70 rounded-lg shadow-sm">TailwindCss</span>
-                                            <span className="px-1.5 py-1 bg-white/70 rounded-lg shadow-sm">Java</span>
-                                            <span className="px-1.5 py-1 bg-white/70 rounded-lg shadow-sm">Html</span>
+                                            {technicalSkills.map((skill) => {
+                                                return (
+                                                    <Tag key={skill}>{skill}</Tag>
+                                                );
+                                            })}
                                         </div>
                                     </div>
                                 <div className='px-5 pb-5 row-span-4 flex-col items-center gap-2'>
@@ -62,13 +82,11 @@ export default function Home() {
                                         <span>Fundamental Skills</span>
                                         </div>
                                         <div className="w-full flex flex-wrap items-center pt-1 gap-2 overflow-hidden">
-                                            <span className="px-1.5 py-1 bg-white/70 rounded-lg shadow-sm">Motivation</span>
-                                            <span className="px-1.5 py-1 bg-white/70 rounded-lg shadow-sm">Adaptability</span>
-                                            <span className="px-1.5 py-1 bg-white/70 rounded-lg shadow-sm">Enthusiasm</span>
-                                            <span className="px-1.5 py-1 bg-white/70 rounded-lg shadow-sm">Problem-solving</span>
-                                            <span className="px-1.5 py-1 bg-white/70 rounded-lg shadow-sm">Self-learning</span>
-                                            <span className="px-1.5 py-1 bg-white/70 rounded-lg shadow-sm">Communication</span>
-                                            <span className="px-1.5 py-1 bg-white/70 rounded-lg shadow-sm">Curiosity</span>
+                                            {fundamentalSkills.map((skill) => {
+                                                return (
+                                                    <Tag key={skill}>{skill}</Tag>
+                                                );
+                                            })}
                                         </div>
                                 </div>
                             </div>
