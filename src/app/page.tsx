@@ -1,151 +1,249 @@
+import {
+    Code,
+    FolderKanban,
+    Github,
+    HardHat,
+    Layers,
+    Linkedin,
+    Pen,
+    Star,
+    UserRoundSearch,
+} from "lucide-react";
 import Image from "next/image";
-import { Star, Code, Layers, Pen, FolderKanban, HardHat, UserRoundSearch, Github, Linkedin   } from "lucide-react";
-import { Link } from "../components/ui/Link";
-import { Tag } from "@/components/ui/Tag";
+import {
+    Card,
+    CardHeader,
+    CardList,
+    CardListItem,
+    CardSecondary,
+} from "@/components/ui/Card";
 import { Label } from "@/components/ui/Label";
-import { technicalSkills, fundamentalSkills } from "@/data/skills";
-import { information } from "@/data/information";
-import { Card, CardHeader, CardList, CardListItem, CardSecondary } from "@/components/ui/Card";
-import { projects } from "@/data/projects";
+import { Tag } from "@/components/ui/Tag";
 import { experience } from "@/data/experience";
+import { information } from "@/data/information";
+import { projects } from "@/data/projects";
+import { fundamentalSkills, technicalSkills } from "@/data/skills";
+import { Link } from "../components/ui/Link";
 
 export default function Home() {
-  return (
-    <div>
-        
-            <div className={' w-screen grid grid-cols-1 lg:grid-cols-3 grid-rows-[auto_auto_auto] lg:grid-rows-[auto_auto_auto_auto_auto]'}>
-            <div className="bg-white/60 col-span-1 row-span-2 lg:row-span-6 rounded-2xl relative overflow-hidden 5 lg:mr-0 m-3 ">
-
-                <div className="text-base w-full grid grid-cols-1 grid-rows-[auto]">
-                    <div className='flex items-center justify-center'>
-                        <div className='
+    return (
+        <div>
+            <div
+                className={
+                    " w-screen grid grid-cols-1 lg:grid-cols-3 grid-rows-[auto_auto_auto] lg:grid-rows-[auto_auto_auto_auto_auto]"
+                }
+            >
+                <div className="bg-white/60 col-span-1 row-span-2 lg:row-span-6 rounded-2xl relative overflow-hidden 5 lg:mr-0 m-3 ">
+                    <div className="text-base w-full grid grid-cols-1 grid-rows-[auto]">
+                        <div className="flex items-center justify-center">
+                            <div
+                                className="
                         col-span-1 relative aspect-[1] w-[70vw] md:w-[50vw] lg:w-[25vw] my-10
-                        '>
-                            <Image
-                                src="/headshot.jpg"
-                                alt="Headshot"
-                                quality={100}
-                                fill
-                                className='rounded-2xl border-3 border-white/60 shadow-xl/20 '
-                            />
+                        "
+                            >
+                                <Image
+                                    src="/headshot.jpg"
+                                    alt="Headshot"
+                                    quality={100}
+                                    fill
+                                    className="rounded-2xl border-3 border-white/60 shadow-xl/20 "
+                                />
+                            </div>
                         </div>
-                    </div>
                         {information.map((info, index) => {
-                            const style = index === 0 ? "top" : index === information.length - 1 ? "bottom" : "middle";
+                            const style =
+                                index === 0
+                                    ? "top"
+                                    : index === information.length - 1
+                                      ? "bottom"
+                                      : "middle";
                             return (
-                                <Label key={info.content} icon={info.icon} style={style}>{info.content}</Label>
-                            )})}
+                                <Label
+                                    key={info.content}
+                                    icon={info.icon}
+                                    style={style}
+                                >
+                                    {info.content}
+                                </Label>
+                            );
+                        })}
 
-                        <div className='col-span-3 my-8 '></div>
-                        <div className='col-span-3 mb-5 row-span-8 bg-white/60 rounded-2xl mx-5 text-lg shadow-xl/20'>
-                            <div className='h-full grid grid-cols-1 grid-rows-10'>
-                                <div className='px-5 row-span-2 flex items-center gap-3'>
-                                    <Star className="w-5 h-5 text-black"/>Skills</div>
-                                <div className='px-5 row-span-4 flex-col items-center gap-3'>
-                                        <div className='flex items-center gap-3'>
+                        <div className="col-span-3 my-8 "></div>
+                        <div className="col-span-3 mb-5 row-span-8 bg-white/60 rounded-2xl mx-5 text-lg shadow-xl/20">
+                            <div className="h-full grid grid-cols-1 grid-rows-10">
+                                <div className="px-5 row-span-2 flex items-center gap-3">
+                                    <Star className="w-5 h-5 text-black" />
+                                    Skills
+                                </div>
+                                <div className="px-5 row-span-4 flex-col items-center gap-3">
+                                    <div className="flex items-center gap-3">
                                         <Code className="w-5 h-5 text-black" />
                                         <span>Technical Skills</span>
-                                        </div>
-                                        <div className="w-full flex flex-wrap items-center pt-1 gap-2 overflow-hidden">
-                                            {technicalSkills.map((skill) => {
-                                                return (
-                                                    <Tag key={skill}>{skill}</Tag>
-                                                );
-                                            })}
-                                        </div>
                                     </div>
-                                <div className='px-5 pb-5 row-span-4 flex-col items-center gap-2'>
-                                        <div className='flex items-center gap-3'>
+                                    <div className="w-full flex flex-wrap items-center pt-1 gap-2 overflow-hidden">
+                                        {technicalSkills.map((skill) => {
+                                            return (
+                                                <Tag key={skill}>{skill}</Tag>
+                                            );
+                                        })}
+                                    </div>
+                                </div>
+                                <div className="px-5 pb-5 row-span-4 flex-col items-center gap-2">
+                                    <div className="flex items-center gap-3">
                                         <Layers className="w-5 h-5 text-black" />
                                         <span>Fundamental Skills</span>
-                                        </div>
-                                        <div className="w-full flex flex-wrap items-center pt-1 gap-2 overflow-hidden">
-                                            {fundamentalSkills.map((skill) => {
-                                                return (
-                                                    <Tag key={skill}>{skill}</Tag>
-                                                );
-                                            })}
-                                        </div>
+                                    </div>
+                                    <div className="w-full flex flex-wrap items-center pt-1 gap-2 overflow-hidden">
+                                        {fundamentalSkills.map((skill) => {
+                                            return (
+                                                <Tag key={skill}>{skill}</Tag>
+                                            );
+                                        })}
+                                    </div>
                                 </div>
                             </div>
                         </div>
-
-                </div>
-            </div>
-            <div className="bg-white/60 col-span-2 row-span-1 m-3 5 rounded-2xl p-5 h-min">
-                <div className="bg-white/60 rounded-2xl w-full shadow-xl/20">
-                    <div className='flex gap-3 p-5' ><Pen className="w-5 h-5 text-black"/>About Me</div>
-                    <div className='flex gap-3 p-5'>
-                        I’m Jacob Turnbull, an aspiring software engineer and AI/ML enthusiast passionate about tackling challenges through creative, hands-on projects. Currently studying a conjoint Bachelor of Science in Computer Science and Bachelor of Commerce in Finance at the University of Auckland, I thrive in independent and collaborative environments, always seeking opportunities to expand my skills and capabilities.
-                        My technical experience spans Python, JavaScript, TypeScript, and Java, with strong proficiency in frameworks such as Next.js, React, Bootstrap, and machine learning libraries including Scikit-Learn, Pandas, and Matplotlib. I’ve built projects ranging from a high-accuracy heart disease risk prediction tool with a Tkinter-based graphical interface to a responsive full-stack web platform for managing school and community clubs. These projects showcase my ability to move seamlessly between front-end and back-end development while delivering practical, user-focused solutions.
-                        I’m highly motivated, adaptable, and resilient—whether it’s independently learning advanced concepts, meeting demanding production targets in manufacturing, or delivering professional service in retail environments. My problem-solving approach is driven by curiosity, persistence, and a desire to understand the “why” behind every challenge, ensuring that solutions are functional, meaningful, and efficient.
-                        Beyond technology, I value fitness, discipline, and personal growth. I’m training to represent New Zealand in powerlifting in 2027. I draw on lessons from rugby, hiking, and teamwork to bring energy, focus, and collaboration to every project I take on.
                     </div>
                 </div>
-            </div>
-
-
-            <div className="bg-white/60 col-span-2 row-span-1 m-3 mr-5 rounded-2xl h-min">
-                <div className='grid grid-cols-1 lg:grid-cols-2 grid-rows-1 '>
-                    <div className='col-span-1 row-span-1 my-5 ml-5 mr-5 lg:mr-0 py-5 pl-5 bg-white/60 rounded-xl shadow-[0_30px_20px_-20px_rgba(0,0,0,0.3)] lg:rounded-none lg:rounded-l-xl'>
-                        <div className='flex gap-3'><FolderKanban className="w-5 h-5 text-black"/>Projects</div>
-                        {projects.map((project) => {
-                            return (
-                                <Card key={project.title}>
-                                    <CardHeader>
-                                        <span>{project.title}</span>
-                                    </CardHeader>
-                                    <CardSecondary>
-                                        <span>{project.tech}</span>
-                                        <span>{project.year}</span>
-                                    </CardSecondary>
-                                    <CardList>
-                                        {project.bullets.map((bullet) => {
-                                            return (
-                                                <CardListItem key={bullet}>{bullet}</CardListItem>
-                                            )
-                                        })}
-                                    </CardList>
-                                    </Card>
-                            )
-                        })}
-                    </div>
-                    <div className='col-span-1 row-span-1 my-5 mr-5 ml-5 lg:ml-0 py-5 pl-5 bg-white/60 rounded-xl shadow-[0_30px_20px_-20px_rgba(0,0,0,0.3)] lg:rounded-none lg:rounded-r-xl'>
-                        <div className='flex gap-3'><HardHat className="w-5 h-5 text-black"/>Work Experience</div>
-                            {experience.map((pastExpereience) => {
-                            return (
-                                <Card key={pastExpereience.title}>
-                                    <CardHeader>
-                                        <span>{pastExpereience.title}</span>
-                                        <span>{pastExpereience.location}</span>
-                                    </CardHeader>
-                                    <CardSecondary>
-                                        <span>{pastExpereience.company}</span>
-                                        <span>{pastExpereience.dates}</span>
-                                    </CardSecondary>
-                                    <CardList>
-                                        {pastExpereience.bullets.map((bullet) => {
-                                            return (
-                                                <CardListItem key={bullet}>{bullet}</CardListItem>
-                                            )
-                                        })}
-                                    </CardList>
-                                    </Card>
-                            )
-                        })}
-                    </div>
-                </div>
-            </div>
-                <div className="bg-white/60 col-span-2 row-span-1 m-3 mr-5 rounded-2xl h-min">
-                    <div className='my-5 mx-5 pl-5 py-5 bg-white/60 rounded-xl shadow-xl/20'>
-                        <div className='flex gap-3'><UserRoundSearch className="w-5 h-5 text-black"/>Links</div>
-                        <div className='flex gap-20'>
-                            <Link style={'socials'} icon={Linkedin} href='https://www.linkedin.com/in/jacob-turnbull-b77a07352/'>Jacob T</Link>
-                            <Link style={'socials'} icon={Github} href='https://github.com/jt1732' >Jt1732</Link>
+                <div className="bg-white/60 col-span-2 row-span-1 m-3 5 rounded-2xl p-5 h-min">
+                    <div className="bg-white/60 rounded-2xl w-full shadow-xl/20">
+                        <div className="flex gap-3 p-5">
+                            <Pen className="w-5 h-5 text-black" />
+                            About Me
+                        </div>
+                        <div className="flex gap-3 p-5">
+                            I’m Jacob Turnbull, an aspiring software engineer
+                            and AI/ML enthusiast passionate about tackling
+                            challenges through creative, hands-on projects.
+                            Currently studying a conjoint Bachelor of Science in
+                            Computer Science and Bachelor of Commerce in Finance
+                            at the University of Auckland, I thrive in
+                            independent and collaborative environments, always
+                            seeking opportunities to expand my skills and
+                            capabilities. My technical experience spans Python,
+                            JavaScript, TypeScript, and Java, with strong
+                            proficiency in frameworks such as Next.js, React,
+                            Bootstrap, and machine learning libraries including
+                            Scikit-Learn, Pandas, and Matplotlib. I’ve built
+                            projects ranging from a high-accuracy heart disease
+                            risk prediction tool with a Tkinter-based graphical
+                            interface to a responsive full-stack web platform
+                            for managing school and community clubs. These
+                            projects showcase my ability to move seamlessly
+                            between front-end and back-end development while
+                            delivering practical, user-focused solutions. I’m
+                            highly motivated, adaptable, and resilient—whether
+                            it’s independently learning advanced concepts,
+                            meeting demanding production targets in
+                            manufacturing, or delivering professional service in
+                            retail environments. My problem-solving approach is
+                            driven by curiosity, persistence, and a desire to
+                            understand the “why” behind every challenge,
+                            ensuring that solutions are functional, meaningful,
+                            and efficient. Beyond technology, I value fitness,
+                            discipline, and personal growth. I’m training to
+                            represent New Zealand in powerlifting in 2027. I
+                            draw on lessons from rugby, hiking, and teamwork to
+                            bring energy, focus, and collaboration to every
+                            project I take on.
                         </div>
                     </div>
+                </div>
+
+                <div className="bg-white/60 col-span-2 row-span-1 m-3 mr-5 rounded-2xl h-min">
+                    <div className="grid grid-cols-1 lg:grid-cols-2 grid-rows-1 ">
+                        <div className="col-span-1 row-span-1 my-5 ml-5 mr-5 lg:mr-0 py-5 pl-5 bg-white/60 rounded-xl shadow-[0_30px_20px_-20px_rgba(0,0,0,0.3)] lg:rounded-none lg:rounded-l-xl">
+                            <div className="flex gap-3">
+                                <FolderKanban className="w-5 h-5 text-black" />
+                                Projects
+                            </div>
+                            {projects.map((project) => {
+                                return (
+                                    <Card key={project.title}>
+                                        <CardHeader>
+                                            <span>{project.title}</span>
+                                        </CardHeader>
+                                        <CardSecondary>
+                                            <span>{project.tech}</span>
+                                            <span>{project.year}</span>
+                                        </CardSecondary>
+                                        <CardList>
+                                            {project.bullets.map((bullet) => {
+                                                return (
+                                                    <CardListItem key={bullet}>
+                                                        {bullet}
+                                                    </CardListItem>
+                                                );
+                                            })}
+                                        </CardList>
+                                    </Card>
+                                );
+                            })}
+                        </div>
+                        <div className="col-span-1 row-span-1 my-5 mr-5 ml-5 lg:ml-0 py-5 pl-5 bg-white/60 rounded-xl shadow-[0_30px_20px_-20px_rgba(0,0,0,0.3)] lg:rounded-none lg:rounded-r-xl">
+                            <div className="flex gap-3">
+                                <HardHat className="w-5 h-5 text-black" />
+                                Work Experience
+                            </div>
+                            {experience.map((pastExpereience) => {
+                                return (
+                                    <Card key={pastExpereience.title}>
+                                        <CardHeader>
+                                            <span>{pastExpereience.title}</span>
+                                            <span>
+                                                {pastExpereience.location}
+                                            </span>
+                                        </CardHeader>
+                                        <CardSecondary>
+                                            <span>
+                                                {pastExpereience.company}
+                                            </span>
+                                            <span>{pastExpereience.dates}</span>
+                                        </CardSecondary>
+                                        <CardList>
+                                            {pastExpereience.bullets.map(
+                                                (bullet) => {
+                                                    return (
+                                                        <CardListItem
+                                                            key={bullet}
+                                                        >
+                                                            {bullet}
+                                                        </CardListItem>
+                                                    );
+                                                },
+                                            )}
+                                        </CardList>
+                                    </Card>
+                                );
+                            })}
+                        </div>
+                    </div>
+                </div>
+                <div className="bg-white/60 col-span-2 row-span-1 m-3 mr-5 rounded-2xl h-min">
+                    <div className="my-5 mx-5 pl-5 py-5 bg-white/60 rounded-xl shadow-xl/20">
+                        <div className="flex gap-3">
+                            <UserRoundSearch className="w-5 h-5 text-black" />
+                            Links
+                        </div>
+                        <div className="flex gap-20">
+                            <Link
+                                style={"socials"}
+                                icon={Linkedin}
+                                href="https://www.linkedin.com/in/jacob-turnbull-b77a07352/"
+                            >
+                                Jacob T
+                            </Link>
+                            <Link
+                                style={"socials"}
+                                icon={Github}
+                                href="https://github.com/jt1732"
+                            >
+                                Jt1732
+                            </Link>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-        </div>
-  );
+    );
 }

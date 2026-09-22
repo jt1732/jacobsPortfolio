@@ -1,4 +1,4 @@
-import { User, GraduationCap, House, Mail, Phone } from "lucide-react";
+import { GraduationCap, House, Mail, Phone, User } from "lucide-react";
 
 export const information = [
     { content: "Jacob Turnbull", icon: User },
