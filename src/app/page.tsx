@@ -1,40 +1,12 @@
 import Image from "next/image";
-import { GraduationCap, User, House, Mail, Phone, Star, Code, Layers, Pen, FolderKanban, HardHat, UserRoundSearch, Github, Linkedin   } from "lucide-react";
+import { Star, Code, Layers, Pen, FolderKanban, HardHat, UserRoundSearch, Github, Linkedin   } from "lucide-react";
 import { Link } from "../components/ui/Link";
 import { Tag } from "@/components/ui/Tag";
 import { Label } from "@/components/ui/Label";
+import { technicalSkills, fundamentalSkills } from "@/data/skills";
+import { information } from "@/data/information";
 
 export default function Home() {
-
-    const technicalSkills = [
-        "Python",
-        "Scikit-Learn",
-        "Tkinter",
-        "Next.js",
-        "TypeScript",
-        "TailwindCss",
-        "Java",
-        "Html",
-    ];
-
-    const fundamentalSkills = [
-        "Motivation",
-        "Adaptability",
-        "Enthusiasm",
-        "Problem-solving",
-        "Self-learning",
-        "Communication",
-        "Curiosity",
-    ];
-
-    const information = [
-        { content: "Jacob Turnbull", icon: User },
-        { content: "BSc (CompSci) | BCom (Finance)", icon: GraduationCap },
-        { content: "Auckland, New Zealand", icon: House },
-        { content: "Jacob.t.turnbull@gmail.com", icon: Mail },
-        { content: "+64 020 4075 9564", icon: Phone },
-    ];
-
   return (
     <div>
         
