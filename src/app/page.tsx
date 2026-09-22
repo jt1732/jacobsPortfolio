@@ -5,6 +5,9 @@ import { Tag } from "@/components/ui/Tag";
 import { Label } from "@/components/ui/Label";
 import { technicalSkills, fundamentalSkills } from "@/data/skills";
 import { information } from "@/data/information";
+import { Card, CardHeader, CardList, CardListItem, CardSecondary } from "@/components/ui/Card";
+import { projects } from "@/data/projects";
+import { experience } from "@/data/experience";
 
 export default function Home() {
   return (
@@ -86,112 +89,50 @@ export default function Home() {
                 <div className='grid grid-cols-1 lg:grid-cols-2 grid-rows-1 '>
                     <div className='col-span-1 row-span-1 my-5 ml-5 mr-5 lg:mr-0 py-5 pl-5 bg-white/60 rounded-xl shadow-[0_30px_20px_-20px_rgba(0,0,0,0.3)] lg:rounded-none lg:rounded-l-xl'>
                         <div className='flex gap-3'><FolderKanban className="w-5 h-5 text-black"/>Projects</div>
-                        <div className='pt-5'>
-                            <div className='flex justify-between pr-5'>
-                                <span>Heart Risk Predictor</span>
-                            </div>
-                            <div className='flex justify-between pr-5'>
-                                <span>Python</span>
-                                <span>2025</span>
-                            </div>
-                            <div className='pl-10 pr-5'>
-                                <li>Designed and implemented a machine learning application to assess potential heart disease risk based on user-submitted survey data. Users receive a personalized, easy-to-understand analysis generated using GPT</li>
-                                <li>Technologies Used: Python, Scikit-Learn, Pandas, Matplotlib, Imblearn, Tkinter, OpenAI GPT API</li>
-                            </div>
-                        </div>
-                        <div className='pt-5'>
-                            <div className='flex justify-between pr-5'>
-                                <span>Personal Portfolio</span>
-                            </div>
-                            <div className='flex justify-between pr-5'>
-                                <span>Next.js | Portfolio Web Application</span>
-                                <span>2025</span>
-                            </div>
-                            <div className='pl-10 pr-5'>
-                                <li>Developed and deployed a responsive personal portfolio website showcasing projects, skills, and experience using Next.js, TypeScript, and Tailwind CSS.</li>
-                                <li>Designed a clean, modern UI with reusable components and optimized performance for fast load times and accessibility across devices.</li>
-                                <li>Technologies Used: HTML, TypeScript, React, Next.js, Vercel, GitHub, Tailwind CSS</li>
-                            </div>
-                        </div>
+                        {projects.map((project) => {
+                            return (
+                                <Card key={project.title}>
+                                    <CardHeader>
+                                        <span>{project.title}</span>
+                                    </CardHeader>
+                                    <CardSecondary>
+                                        <span>{project.tech}</span>
+                                        <span>{project.year}</span>
+                                    </CardSecondary>
+                                    <CardList>
+                                        {project.bullets.map((bullet) => {
+                                            return (
+                                                <CardListItem key={bullet}>{bullet}</CardListItem>
+                                            )
+                                        })}
+                                    </CardList>
+                                    </Card>
+                            )
+                        })}
                     </div>
                     <div className='col-span-1 row-span-1 my-5 mr-5 ml-5 lg:ml-0 py-5 pl-5 bg-white/60 rounded-xl shadow-[0_30px_20px_-20px_rgba(0,0,0,0.3)] lg:rounded-none lg:rounded-r-xl'>
                         <div className='flex gap-3'><HardHat className="w-5 h-5 text-black"/>Work Experience</div>
-                        <div className='pt-5'>
-                            <div className='flex justify-between pr-5'>
-                                <span>Website Contractor</span>
-                            </div>
-                            <div className='flex justify-between pr-5'>
-                                <span>Wainui RV</span>
-                                <span>February 2026 - July 2026</span>
-                            </div>
-                            <div className='pl-10 pr-5'>
-                                <li>Designed and built the full architecture of a Next.js 16 monolith with Payload CMS 3 embedded as the headless backend, deployed on Vercel</li>
-                                <li>Designed and implemented a database schema in MongoDB via six Payload collections with relationship fields and role-based access control</li>
-                                <li>Technologies used: TypeScript, Next.js, React, Payload CMS, MongoDB, CSS, Vercel, Tailwind, Shadcn, Vercel</li>
-                            </div>
-                        </div>
-                        <div className='pt-5'>
-                            <div className='flex justify-between pr-5'>
-                                <span>IT Commercial Intern</span>
-                                <span>Waihi, Waikato</span>
-                            </div>
-                            <div className='flex justify-between pr-5'>
-                                <span>OceanaGold</span>
-                                <span>November 2025 - February 2026</span>
-                            </div>
-                            <div className='pl-10 pr-5'>
-                                <li>Developed and maintained scripts to automate plant server operations using PowerShell and Batch.</li>
-                                <li>Created and maintained scripts for documentation processes using PowerShell and Active Directory.</li>
-                                <li>Researched and implemented methodologies for application deployment using JavaScript and REST APIs.</li>
-
-                                </div>
-                        </div>
-                        <div className='pt-5'>
-                            <div className='flex justify-between pr-5'>
-                                <span>Professional Sales Assistant</span>
-                                <span>Wairau Valley, Auckland</span>
-                            </div>
-                            <div className='flex justify-between pr-5'>
-                                <span>Elite Fitness</span>
-                                <span>April 2025 - November 2025</span>
-                            </div>
-                            <div className='pl-10 pr-5'>
-                                <li>Provided friendly and professional customer service by assisting with queries and ensuring a positive in-store experience</li>
-                                <li>Resolved customer issues promptly and effectively, maintaining a high standard of professionalism</li>
-                                <li>Assisted in assembling and delivering purchased products, ensuring high-quality and efficient service</li>
-                            </div>
-                        </div>
-                        <div className='pt-10'>
-                            <div className='flex justify-between pr-5'>
-                                <span>General Hand</span>
-                                <span>Katikati, Bay Of Plenty</span>
-                            </div>
-                            <div className='flex justify-between pr-5'>
-                                <span>Claymark Limited</span>
-                                <span>2022 - 2025</span>
-                            </div>
-                            <div className='pl-10 pr-5'>
-                                <li>Assisted in the manufacturing and production of Claymark clear pine</li>
-                                <li>Operated production machines and hand tools</li>
-                                <li>Performed grading processes to assess product quality and meet company standards</li>
-                                <li>Engaged in physical labor and teamwork to enhance production efficiency</li>
-                            </div>
-                        </div>
-                        <div className='pt-10'>
-                            <div className='flex justify-between pr-5'>
-                                <span>Shop Hand</span>
-                                <span>Waihi Beach, Bay Of Plenty</span>
-                            </div>
-                            <div className='flex justify-between pr-5'>
-                                <span>Wilson Road Fish Shop</span>
-                                <span>2021 - 2023</span>
-                            </div>
-                            <div className='pl-10 pr-5'>
-                                <li>Processed customer orders efficiently while delivering excellent customer service</li>
-                                <li>Prepared and cooked food to meet quality and safety standards</li>
-                                <li>Packaged food and ensured cleanliness and organization in both the kitchen and store</li>
-                            </div>
-                        </div>
+                            {experience.map((pastExpereience) => {
+                            return (
+                                <Card key={pastExpereience.title}>
+                                    <CardHeader>
+                                        <span>{pastExpereience.title}</span>
+                                        <span>{pastExpereience.location}</span>
+                                    </CardHeader>
+                                    <CardSecondary>
+                                        <span>{pastExpereience.company}</span>
+                                        <span>{pastExpereience.dates}</span>
+                                    </CardSecondary>
+                                    <CardList>
+                                        {pastExpereience.bullets.map((bullet) => {
+                                            return (
+                                                <CardListItem key={bullet}>{bullet}</CardListItem>
+                                            )
+                                        })}
+                                    </CardList>
+                                    </Card>
+                            )
+                        })}
                     </div>
                 </div>
             </div>
