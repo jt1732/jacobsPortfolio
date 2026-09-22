@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { GraduationCap, User, House, Mail, Phone, Star, Code, Layers, Pen, FolderKanban, HardHat, UserRoundSearch, Github, Linkedin   } from "lucide-react";
-import Link from "next/link";
+import { Link } from "../components/ui/Link";
 
 export default function Home() {
   return (
@@ -8,7 +8,7 @@ export default function Home() {
             <div className="w-screen h-15 bg-white/60 flex items-center justify-between px-5">
                 <h1>Jacob&#39;s Portfolio</h1>
                 <div className='flex space-x-6 pr-5'>
-                    <Link href={'/JacobT_Resume.pdf'} target="_blank" className="p-2 bg-transparent hover:bg-white/40 rounded-xl">Extended CV</Link>
+                    <Link href={'/JacobT_Resume.pdf'} style={"header"}>Extended CV</Link>
                 </div>
             </div>
              <div className={' w-screen grid grid-cols-1 lg:grid-cols-3 grid-rows-[auto_auto_auto] lg:grid-rows-[auto_auto_auto_auto_auto]'}>
@@ -87,7 +87,7 @@ export default function Home() {
                             I’m Jacob Turnbull, an aspiring software engineer and AI/ML enthusiast passionate about tackling challenges through creative, hands-on projects. Currently studying a conjoint Bachelor of Science in Computer Science and Bachelor of Commerce in Finance at the University of Auckland, I thrive in independent and collaborative environments, always seeking opportunities to expand my skills and capabilities.
                             My technical experience spans Python, JavaScript, TypeScript, and Java, with strong proficiency in frameworks such as Next.js, React, Bootstrap, and machine learning libraries including Scikit-Learn, Pandas, and Matplotlib. I’ve built projects ranging from a high-accuracy heart disease risk prediction tool with a Tkinter-based graphical interface to a responsive full-stack web platform for managing school and community clubs. These projects showcase my ability to move seamlessly between front-end and back-end development while delivering practical, user-focused solutions.
                             I’m highly motivated, adaptable, and resilient—whether it’s independently learning advanced concepts, meeting demanding production targets in manufacturing, or delivering professional service in retail environments. My problem-solving approach is driven by curiosity, persistence, and a desire to understand the “why” behind every challenge, ensuring that solutions are functional, meaningful, and efficient.
-                            Beyond technology, I value fitness, discipline, and personal growth. I’m training to represent New Zealand in powerlifting in 2026. I draw on lessons from rugby, hiking, and teamwork to bring energy, focus, and collaboration to every project I take on.
+                            Beyond technology, I value fitness, discipline, and personal growth. I’m training to represent New Zealand in powerlifting in 2027. I draw on lessons from rugby, hiking, and teamwork to bring energy, focus, and collaboration to every project I take on.
                         </div>
                     </div>
                 </div>
@@ -210,8 +210,8 @@ export default function Home() {
                         <div className='my-5 mx-5 pl-5 py-5 bg-white/60 rounded-xl shadow-xl/20'>
                             <div className='flex gap-3'><UserRoundSearch className="w-5 h-5 text-black"/>Links</div>
                             <div className='flex gap-20'>
-                                <a className='flex gap-3 pt-5 text-blue-500' href='https://www.linkedin.com/in/jacob-turnbull-b77a07352/' ><Linkedin className="w-5 h-5 text-black"/>Jacob T</a>
-                                <a className='flex gap-3 pt-5 text-blue-500' href='https://github.com/jt1732' ><Github className="w-5 h-5 text-black"/>Jt1732</a>
+                                <Link style={'socials'} icon={Linkedin} href='https://www.linkedin.com/in/jacob-turnbull-b77a07352/'>Jacob T</Link>
+                                <Link style={'socials'} icon={Github} href='https://github.com/jt1732' >Jt1732</Link>
                             </div>
                         </div>
                 </div>
