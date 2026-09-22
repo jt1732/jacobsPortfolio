@@ -2,6 +2,7 @@ import { cva, type VariantProps } from "class-variance-authority";
 import type { LucideIcon } from "lucide-react";
 import NextLink from "next/link";
 import type { ReactNode } from "react";
+import { cn } from "@/helpers/cn";
 
 const linkStyles = cva("flex gap-3 items-center", {
     variants: {
@@ -23,6 +24,7 @@ const linkStyles = cva("flex gap-3 items-center", {
 interface LinkProps extends VariantProps<typeof linkStyles> {
     href: string;
     children: ReactNode;
+    className?: string;
     icon?: LucideIcon;
 }
 
@@ -30,11 +32,15 @@ export const Link = ({
     style,
     size,
     children,
+    className,
     icon: Icon,
     ...props
 }: LinkProps) => {
     return (
-        <NextLink className={linkStyles({ style, size })} {...props}>
+        <NextLink
+            className={cn(linkStyles({ style, size, className }))}
+            {...props}
+        >
             {Icon && <Icon className="w-5 h-5 text-black" />}
             {children}
         </NextLink>

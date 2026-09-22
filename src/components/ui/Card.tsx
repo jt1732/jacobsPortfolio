@@ -1,25 +1,37 @@
 import type { ReactNode } from "react";
+import { cn } from "@/helpers/cn";
 
 interface CardProps {
     children: ReactNode;
+    className?: string;
 }
 
-export const Card = ({ children }: CardProps) => {
-    return <div className="pt-5">{children}</div>;
+export const Card = ({ children, className }: CardProps) => {
+    return <div className={cn("pt-5", className)}>{children}</div>;
 };
 
-export const CardHeader = ({ children }: CardProps) => {
-    return <div className="flex justify-between pr-5">{children}</div>;
+export const CardHeader = ({ children, className }: CardProps) => {
+    return (
+        <div className={cn("flex justify-between pr-5", className)}>
+            {children}
+        </div>
+    );
 };
 
-export const CardSecondary = ({ children }: CardProps) => {
-    return <div className="flex justify-between pr-5">{children}</div>;
+export const CardSecondary = ({ children, className }: CardProps) => {
+    return (
+        <div className={cn("flex justify-between pr-5", className)}>
+            {children}
+        </div>
+    );
 };
 
-export const CardList = ({ children }: CardProps) => {
-    return <ul className="list-disc pl-10 pr-5">{children}</ul>;
+export const CardList = ({ children, className }: CardProps) => {
+    return (
+        <ul className={cn("list-disc pl-10 pr-5", className)}>{children}</ul>
+    );
 };
 
-export const CardListItem = ({ children }: CardProps) => {
-    return <li>{children}</li>;
+export const CardListItem = ({ children, className }: CardProps) => {
+    return <li className={cn(className)}>{children}</li>;
 };
