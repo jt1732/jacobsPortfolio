@@ -2,6 +2,7 @@ import Image from "next/image";
 import { GraduationCap, User, House, Mail, Phone, Star, Code, Layers, Pen, FolderKanban, HardHat, UserRoundSearch, Github, Linkedin   } from "lucide-react";
 import { Link } from "../components/ui/Link";
 import { Tag } from "@/components/ui/Tag";
+import { Label } from "@/components/ui/Label";
 
 export default function Home() {
 
@@ -26,6 +27,14 @@ export default function Home() {
         "Curiosity",
     ];
 
+    const information = [
+        { content: "Jacob Turnbull", icon: User },
+        { content: "BSc (CompSci) | BCom (Finance)", icon: GraduationCap },
+        { content: "Auckland, New Zealand", icon: House },
+        { content: "Jacob.t.turnbull@gmail.com", icon: Mail },
+        { content: "+64 020 4075 9564", icon: Phone },
+    ];
+
   return (
     <div>
         
@@ -46,17 +55,11 @@ export default function Home() {
                             />
                         </div>
                     </div>
-                    
-                        <div className='p-5 mt-5 mx-5 pl-3 md:pl-5 col-span-3 bg-white/60 rounded-t-2xl flex items-center gap-3'>
-                                <User className="w-3 h-3 lg:w-5 lg:h-5 text-black" />Jacob Turnbull</div>
-                        <div className='p-5 mx-5 pl-3 md:pl-5 col-span-3 bg-white/60 flex items-center gap-3'>
-                            <GraduationCap className="w-3 h-3 lg:w-5 lg:h-5 text-black" />BSc (CompSci) | BCom (Finance)</div>
-                        <div className='p-5 mx-5 pl-3 md:pl-5 col-span-3 bg-white/60 flex items-center gap-3'>
-                            <House className="w-3 h-3 lg:w-5 lg:h-5 text-black" />Auckland, New Zealand</div>
-                        <div className='p-5 mx-5 pl-3 md:pl-5 col-span-3 bg-white/60 flex items-center gap-3'>
-                            <Mail className="w-3 h-3 lg:w-5 lg:h-5 text-black" />Jacob.t.turnbull@gmail.com</div>
-                        <div className='p-5 mx-5 pl-3 md:pl-5 col-span-3 bg-white/60 rounded-b-2xl flex items-center shadow-xl/20 gap-3'>
-                            <Phone className="w-3 h-3 lg:w-5 lg:h-5 text-black" />+64 020 4075 9564</div>
+                        {information.map((info, index) => {
+                            const style = index === 0 ? "top" : index === information.length - 1 ? "bottom" : "middle";
+                            return (
+                                <Label key={info.content} icon={info.icon} style={style}>{info.content}</Label>
+                            )})}
 
                         <div className='col-span-3 my-8 '></div>
                         <div className='col-span-3 mb-5 row-span-8 bg-white/60 rounded-2xl mx-5 text-lg shadow-xl/20'>
